@@ -35,7 +35,13 @@ Because often it is desirable not to analyze all images at once, the image filen
 4. Create a thumbnail: A thumbnail is saved as an image file. This thumbnail shows a reduced version of the original whole slide image with all ROIs as an overlay. (saved in the cache folder)
 5. Analysis of distances: The distance of all blood vessels within the ROI "FullTumorValidated" to the other ROIs is measured. Then, the distribution of distances is analyzed as described in our paper.
 
+If you run this whole process, you will receive intermediate results in the cache folder and final heat maps in the results folder. The last step is to merge all these results into a large CSV table. This can be done by running the script "main_measureHotspotArea.m". This script reads all intermediate measurements from the cache folder and results folder and merges them in an output file. The name of the table can be specified within this file, by default it is "QuantificationHotspotTable.csv".
+
+##Performance
+
 For one image, this procedure takes between 30 and 60 minutes on a standard computer workstation. Often, it is desirable to perform one of these tasks only. Therefore, it can be specified which of these five steps should be performed. To change this, you have to assign 0 or 1 to the corresponding variables ("do") in "main_blockproc_2016.m").
 
-If you run this whole process, you will receive intermediate results in the cache folder and final heat maps in the results folder. The last step is to merge all these results into a large CSV table. This can be done by running the script "main_measureHotspotArea.m". This script reads all intermediate measurements from the cache folder and results folder and merges them in an output file. The name of the table can be specified within this file, by default it is "QuantificationHotspotTable.csv".
+##Random numbers
+
+Please note that this program uses random numbers at different points. Generally, the observed distribution of blood vessels is compared to random distributions several times. For the main part of the program (detection of a vascular belt zone / angiogenic zone), this is done reproducibly by a) seeding the random number generator before each run and b) performing N=100 random experiments and using the average. However, these precautions might not be present in all other parts of the program so please be aware that repeated experimental runs can yield slightly different results. 
  
