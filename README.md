@@ -5,11 +5,20 @@ Distribution analysis of CD34-stained blood vessels in histopathological whole s
 
 This is a general outline of the blood vessel analysis presented in this repository. It is described in more detail in the following paper:
 
-[INSERT]
+"Identification of a characteristic vascular belt zone in human colorectal cancer"
 
 For questions, please contact Dr. Jakob N. Kather of Heidelberg University, Germany (http://orcid.org/0000-0002-3730-5348). Please note that this is experimental software not designed for routine work. When you use it, you have to manually change a couple of variables in the code each time you run the code. Please also observe the disclaimer and the license. Please cite our paper if you re-use parts of the method.
 
 ##General usage
+
+Preparation:
+
+First, download external dependencies: 
+- Yen.m and CumMeanVar.m from [1]. Place these files in the sub-folder "Yen"
+- inpoly.m from [2]. Place this file in the sub-folder "poly_stuff".
+
+[1] http://dismac.dii.unipg.it/paper/code.html from: Francesco Bianconi et al.: "A sequential machine vision procedure for assessing paper impurities" doi: 10.1016/j.compind.2013.12.001
+[2] https://www.mathworks.com/matlabcentral/fileexchange/10391-fast-points-in-polygon-test/content/poly_stuff/inpoly.m 
 
 The general usage is as follows:
 

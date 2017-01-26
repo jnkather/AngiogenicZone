@@ -1,5 +1,5 @@
 % created by JN Kather and CA Weis 2015-2016
-% jakob.kather@medma.uni-heidelberg.de
+% jakob.kather@nct-heidelberg.de
 % license: MIT license, see separate file for license and disclaimer
 %
 % parts of the code are based on the following publication

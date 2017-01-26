@@ -1,5 +1,5 @@
 % created by JN Kather and CA Weis 2015-2016
-% jakob.kather@medma.uni-heidelberg.de
+% jakob.kather@nct-heidelberg.de
 % license: MIT license, see separate file for license and disclaimer
 %
 % parts of the code are based on the following publication
@@ -16,10 +16,10 @@
 function cnst = getConstants()
 
     %% general settings
-    cnst.img_folder = 'G:/Jakob_Kather/_ANGIOGENIC_ZONE_DATA_UPLOAD/01_CD34_full_cohort_TIFF_images/Validation Cohort/';  % all folder names end with /
+    cnst.img_folder = 'D:/Kather-LOCAL/My_clean_raw_WSI_data/2016-CRC_HLM_UMM_CD34/';  % all folder names end with /
     cnst.path = strcat(cnst.img_folder);
-    cnst.cachepath = 'G:/Jakob_Kather/_ANGIOGENIC_ZONE_DATA_UPLOAD/04_ROIs_and_Matlab_files_cache_multivariate/Blood_vessels_CD34_cache_Validation_Cohort/';
-    cnst.resultsFolder = 'G:/Jakob_Kather/_ANGIOGENIC_ZONE_DATA_UPLOAD/05_CD34_heat_maps_results_multivariate/Blood_vessel_CD34_results_Validation_Cohort/'; 
+    cnst.cachepath = '../cache_multivariate/';
+    cnst.resultsFolder = '../results_multivariate/'; 
     cnst.parallel = true;      % use parallel processing? default true
     cnst.resizefactor = 0.2;      % resize factor for saving masks
     cnst.DispOn = true;         % show output on screen? default true

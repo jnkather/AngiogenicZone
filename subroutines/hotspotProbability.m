@@ -1,5 +1,5 @@
 % created by JN Kather and CA Weis 2015-2016
-% jakob.kather@medma.uni-heidelberg.de
+% jakob.kather@nct-heidelberg.de
 % license: MIT license, see separate file for license and disclaimer
 %
 % parts of the code are based on the following publication
@@ -79,39 +79,4 @@ function [X,Y,probabilityMap,densityOBS,sigLevelBonferroni] = ...
     end
 
 end
-
-
-    
-%     disp('CLEAN');
-%     size(probabilityMap)
-%     max(probabilityMap(:))
-%     min(probabilityMap(:))
-    
-%     figure()
-%     imshow(probabilityMap,[])
-%     colormap hot
-%     zValueSigLevel = norminv(1-sigLevelBonferroni)
-%     colormap(hot());
-%     caxis([0 zValueSigLevel/0.67]);
-%     colorbar;
-%     axis equal tight on;
-
-%     probabilityMapOLD = (densityOBS - mean(densityCSR(:))) / ...
-%                             std(densityCSR(:));
-%     probabilityMapOLD(probabilityMapOLD<0)=0;                    
-%     disp('NOT CLEAN');
-%     size(probabilityMapOLD)
-%     max(probabilityMapOLD(:))
-%     min(probabilityMapOLD(:))    
-    
-%     figure()
-%     imshow(probabilityMapOLD,[])
-%     colormap hot
-%     zValueSigLevel = norminv(1-sigLevelBonferroni)
-%     colormap(hot());
-%     caxis([0 zValueSigLevel/0.67]);
-%     colorbar;
-%     axis equal tight on;
-%     
-%     pause
 

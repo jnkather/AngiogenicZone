@@ -1,5 +1,5 @@
 % created by JN Kather and CA Weis 2015-2016
-% jakob.kather@medma.uni-heidelberg.de
+% jakob.kather@nct-heidelberg.de
 % license: MIT license, see separate file for license and disclaimer
 %
 % parts of the code are based on the following publication
@@ -24,7 +24,7 @@ format compact; clc;
 % -- add toolboxes to current path
 addpath([pwd,'/subroutines'],'-end'); % my own subroutines
 addpath([pwd,'/poly_stuff'],'-end');  % code from http://www.mathworks.com/matlabcentral/fileexchange/10391-fast-points-in-polygon-test
-addpath([pwd,'/Yen'],'-end');  % code from http://www.mathworks.com/matlabcentral/fileexchange/10391-fast-points-in-polygon-test
+addpath([pwd,'/Yen'],'-end');  % code from http://dismac.dii.unipg.it/paper/code.html 
 
 cnst = getConstants(); % define constants
 cnst.path = strcat(cnst.img_folder);
@@ -33,8 +33,8 @@ showResult = false; % show figures?
 
 % specify directories and file to load, read all files
 %id = '*';
-filtr = '*'; % default *
-allFiles = dir([cnst.cachepath,'*',filtr,'*_vessel_measurements.mat']);
+filtr = '*'; % default *, starts and ends with *
+allFiles = dir([cnst.cachepath,'',filtr,'_vessel_measurements.mat']);
 first = 1;
 
 % do this for every suitable file
@@ -253,7 +253,6 @@ for i_ROI=1:numel(ROINameContainer)
     
     %----------
     
-    
     % save to master table
     if (first == 1)
      masterTable = struct2table(currentTable);
@@ -271,6 +270,6 @@ for i_ROI=1:numel(ROINameContainer)
 end
 end
 
-writetable(masterTable,'QuantificationHotspotTable_FIRST_COHORT_2016-06-27.csv');
-writetable(masterTable,'QuantificationHotspotTable_FIRST_COHORT_2016-06-27.xlsx');
+writetable(masterTable,'QuantificationHotspotTable_COHORT_2017.csv');
+writetable(masterTable,'QuantificationHotspotTable_COHORT_2017.xlsx');
 
