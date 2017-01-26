@@ -24,17 +24,19 @@ First, download external dependencies:
 
 The general usage is as follows:
 
-Use "main_blockproc_2016.m" to analyze the distribution of blood vessels in histological whole slide images. These images (tiled TIFF, Scans of CD34 stained tissue slides) can be found in the folder:
+Use "main_blockproc_2016.m" to analyze the distribution of blood vessels in histological whole slide images. These images (tiled TIFF, Scans of CD34 stained tissue slides) represent two batches.
 
 - "01_CD34_full_cohort_TIFF_images/First Cohort" for the First cohort
 - "01_CD34_full_cohort_TIFF_images/Validation Cohort" for the Validation cohort
+
+Please note that the actual image files are not part of this repository. Please refer to the paper for a DOI to these images.
 
 Before running, two folders have to be defined in the file "getConstants.m":
 
 - the "cache folder" that is used to store all intermediate results (including segmentation masks etc.). Default for this folder is "04_ROIs_and_Matlab_files_cache_multivariate"
 - the "results folder" that is used to store all final results (including heat maps for each image, thumbnails etc.)
 
-(please note that at the end of the whole analysis, the final CSV table will be stored in the root folder, not in the default folder).
+(please note that at the end of the whole analysis, the final CSV table will be stored in the root folder).
 
 ##Manual settings
 
