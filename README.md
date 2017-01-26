@@ -18,7 +18,9 @@ First, download external dependencies:
 - inpoly.m from [2]. Place this file in the sub-folder "poly_stuff".
 
 [1] http://dismac.dii.unipg.it/paper/code.html from: Francesco Bianconi et al.: "A sequential machine vision procedure for assessing paper impurities" doi: 10.1016/j.compind.2013.12.001
+
 [2] https://www.mathworks.com/matlabcentral/fileexchange/10391-fast-points-in-polygon-test/content/poly_stuff/inpoly.m 
+
 
 The general usage is as follows:
 
