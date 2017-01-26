@@ -33,10 +33,10 @@ Please note that the actual image files are not part of this repository. Please 
 
 Before running, two folders have to be defined in the file "getConstants.m":
 
-- the "cache folder" that is used to store all intermediate results (including segmentation masks etc.). Default for this folder is "04_ROIs_and_Matlab_files_cache_multivariate"
-- the "results folder" that is used to store all final results (including heat maps for each image, thumbnails etc.)
+- the "cache folder" that is used to store all intermediate results (including segmentation masks etc.). Default for this folder is '../cache_multivariate/'
+- the "results folder" that is used to store all final results (including heat maps for each image, thumbnails etc.). Default for this folder ist '../results_multivariate/'
 
-(please note that at the end of the whole analysis, the final CSV table will be stored in the root folder).
+At the end of the whole analysis, the final CSV table will be stored in the root folder.
 
 ##Manual settings
 
